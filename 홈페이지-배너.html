@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여행갈땐 에어투어</title>
     <!-- <link rel="icon" href=""> -->
-     <link rel="stylesheet" href="css/홈페이지.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/11965a13b6.js" crossorigin="anonymous"></script>
     <script src="script/jquery-3.7.1.min.js"></script>
     <script src="script/jquery-ui.min.js"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="css/홈페이지.css">
 </head>
 
 <body>
@@ -50,7 +51,7 @@
         </nav>
     </header>
     <!-- Swiper 배너 -->
-    <div class="swiper mySwiper">
+    <div class="swiper mainSwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide"></div>
             <div class="swiper-slide">
@@ -148,7 +149,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".mainSwiper", {
             spaceBetween: 0,
             centeredSlides: true,
             autoplay: {
@@ -156,12 +157,12 @@
                 disableOnInteraction: false,
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: ".mainSwiper .swiper-pagination",
                 clickable: true,
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".mainSwiper .swiper-button-next",
+                prevEl: ".mainSwiper .swiper-button-prev",
             },
         });
 
